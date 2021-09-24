@@ -2,6 +2,11 @@ apiVersion: skaffold/v2beta23
 kind: Config
 metadata:
   name: skaffold-testrepo
+build:
+  artifacts:
+  - image: my-nginx
+    docker:
+      dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:
