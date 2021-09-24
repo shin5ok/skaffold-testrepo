@@ -1,0 +1,8 @@
+apiVersion: skaffold/v2beta23
+kind: Config
+metadata:
+  name: skaffold-testrepo
+deploy:
+  kubectl:
+    manifests:
+    - manifests/deployment.yaml
