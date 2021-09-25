@@ -10,4 +10,10 @@ build:
 deploy:
   kubectl:
     manifests:
-    - manifests/deployment.yaml
+    - manifests/*.yaml
+profiles:
+ - name: prod
+   deploy:
+     kubectl:
+       manifests:
+         - manifest/*.yaml
