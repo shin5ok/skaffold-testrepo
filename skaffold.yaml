@@ -7,6 +7,8 @@ build:
   - image: my-nginx
     docker:
       dockerfile: Dockerfile
+  local:
+    push: us-central1-docker.pkg.dev/shingo-new-proto/myrepo
 deploy:
   kubectl:
     manifests:
