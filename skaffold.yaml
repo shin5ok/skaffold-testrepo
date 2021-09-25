@@ -16,4 +16,4 @@ profiles:
    deploy:
      kubectl:
        manifests:
-         - manifest/prod/*.yaml
+         - manifests/prod/*.yaml
