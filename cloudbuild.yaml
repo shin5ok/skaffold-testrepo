@@ -5,6 +5,7 @@ steps:
     - build
     - '--interactive=false'
     - '--file-output=artifacts.json'
+    - --default-repo=us-central1-docker.pkg.dev/$PROJECT_ID/myrepo
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: bash
   args:
