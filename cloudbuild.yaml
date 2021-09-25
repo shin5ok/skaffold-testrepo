@@ -13,4 +13,4 @@ steps:
     - >
       gcloud alpha deploy releases create rel-$(date +%y%m%d-%s)
       --delivery-pipeline=web-app --build-artifacts=artifacts.json
-      --region=us-central1 --annotation=commitId:$REVISION_ID
+      --region=us-central1 --annotations=commitId:$REVISION_ID
