@@ -13,4 +13,6 @@ steps:
     - >
       gcloud beta deploy releases create rel-$(date +%y%m%d-%s)
       --delivery-pipeline=shingo-app-test --build-artifacts=artifacts.json
-      --region=us-central1 --annotations="commitId:$REVISION_ID"
+      --region=us-central1
+      # --annotations="commitId:$REVISION_ID"
+      # --region=us-central1 --annotations="commitId:$REVISION_ID"
