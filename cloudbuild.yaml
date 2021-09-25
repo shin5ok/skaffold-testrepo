@@ -1,0 +1,15 @@
+steps:
+- name: gcr.io/k8s-skaffold/skaffold
+  args:
+    - skaffold
+    - build
+    - '--interactive=false'
+    - '--file-output=artifacts.json'
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  entrypoint: bash
+  args:
+    - '-c'
+    - >
+      gcloud beta deploy releases create rel-$(date +%y%m%d-%s)
+      --delivery-pipeline=web-app --build-artifacts=artifacts.json
+      --region=us-central1 --annotation=commitId:$REVISION_ID
