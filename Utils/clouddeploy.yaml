@@ -6,7 +6,6 @@ description: main application pipeline
 serialPipeline:
  stages:
  - targetId: dev
-   profiles: ["dev"]
  - targetId: staging
    profiles: ["staging"]
  - targetId: prod
