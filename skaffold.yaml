@@ -11,9 +11,9 @@ deploy:
   kubectl:
     manifests:
     - manifests/*.yaml
-profiles:
- - name: prod
-   deploy:
-     kubectl:
-       manifests:
-         - manifests/prod/*.yaml
+# profiles:
+#  - name: prod
+#    deploy:
+#      kubectl:
+#        manifests:
+#          - manifests/prod/*.yaml
