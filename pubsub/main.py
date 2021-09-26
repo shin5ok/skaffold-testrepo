@@ -5,7 +5,7 @@ import os
 project_id = os.environ.get("PROJECT_ID")
 subscription_id = os.environ.get("SUBSC")
 # Number of seconds the subscriber should listen for messages
-# timeout = 5.0
+timeout = 5.0
 
 subscriber = pubsub_v1.SubscriberClient()
 # The `subscription_path` method creates a fully qualified identifier
@@ -25,7 +25,8 @@ with subscriber:
     try:
         # When `timeout` is not set, result() will block indefinitely,
         # unless an exception is encountered first.
-        streaming_pull_future.result(timeout=timeout)
+        streaming_pull_future.result()
+        # streaming_pull_future.result(timeout=timeout)
     except TimeoutError:
         streaming_pull_future.cancel()  # Trigger the shutdown.
         streaming_pull_future.result()  # Block until the shutdown is complete.
