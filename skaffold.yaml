@@ -8,12 +8,14 @@ build:
     docker:
       dockerfile: Dockerfile
 deploy:
-  kubectl:
-    manifests:
-    - manifests/*.yaml
-# profiles:
-#  - name: prod
-#    deploy:
-#      kubectl:
-#        manifests:
-#          - manifests/prod/*.yaml
+  kustomize:
+    path: manifests/overlays/dev
+profiles:
+ - name: staging
+   deploy:
+     kustomize:
+      path: manifests/overlays/staging
+ - name: prod
+   deploy:
+     kustomize:
+      path: manifests/overlays/prod
