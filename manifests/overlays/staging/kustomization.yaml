@@ -1,3 +1,6 @@
 bases:
 - ../../base
 namePrefix: stage-
+patchesStrategicMerge:
+- service.yaml
+- deployment.yaml
