@@ -3,4 +3,3 @@ bases:
 namePrefix: stage-
 patchesStrategicMerge:
 - service.yaml
-- deployment.yaml
