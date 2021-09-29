@@ -4,7 +4,7 @@ services:
                 image: us-central1-docker.pkg.dev/shingo-new-proto/myrepo/pubsub-subsc
                 environment:
                         PROJECT_ID: "shingo-new-proto"
-                        SUBSC: "approvers-subsc"
+                        SUBSC: "approvals-subsc" 
                 restart: always
         resources:
                 image: us-central1-docker.pkg.dev/shingo-new-proto/myrepo/pubsub-subsc
