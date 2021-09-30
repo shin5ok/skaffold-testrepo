@@ -1,5 +1,5 @@
 bases:
 - ../../base
-namePrefix: stage-
+# namePrefix: stage-
 patchesStrategicMerge:
 - service.yaml
