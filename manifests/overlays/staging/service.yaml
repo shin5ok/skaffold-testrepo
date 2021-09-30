@@ -5,10 +5,4 @@ metadata:
   labels:
     run: my-web
 spec:
-  ports:
-  - port: 80
-    targetPort: 8080
-    protocol: TCP
-  selector:
-    run: my-web
   type: LoadBalancer
