@@ -20,7 +20,7 @@ metadata:
     run: my-api
 spec:
   ports:
-  - port: 80
+  - port: 8080
     protocol: TCP
   selector:
     run: my-web
