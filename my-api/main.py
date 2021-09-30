@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.INFO)
 
-name = "Shingo"
+name = "Kawano"
 # reserve string 'Ping'
 @app.route('/api')
 def _root():
