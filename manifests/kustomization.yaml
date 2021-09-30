@@ -1,5 +1,5 @@
 namePrefix: dev-
 commonLabels:
-  app: my-nginx
+  app: my-web
 resources:
 - deployment.yaml

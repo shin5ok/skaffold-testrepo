@@ -4,9 +4,16 @@ metadata:
   name: skaffold-testrepo
 build:
   artifacts:
-  - image: my-nginx
+  - image: my-web
     docker:
-      dockerfile: Dockerfile
+      dockerfile: my-web/Dockerfile
+    context: my-web
+  - image: my-api
+    docker:
+      dockerfile: my-api/Dockerfile
+    context: my-api
+  local:
+    useDockerCLI: true
 deploy:
   kustomize:
     path: manifests/overlays/dev
