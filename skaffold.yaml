@@ -18,11 +18,11 @@ deploy:
   kustomize:
     path: manifests/overlays/dev
 profiles:
-- name: staging
-  deploy:
-    kustomize:
-      path: manifests/overlays/staging
-- name: prod
-  deploy:
-    kustomize:
-      path: manifests/overlays/prod
+  - name: staging
+    deploy:
+      kustomize:
+        path: manifests/overlays/staging
+  - name: prod
+    deploy:
+      kustomize:
+        path: manifests/overlays/prod

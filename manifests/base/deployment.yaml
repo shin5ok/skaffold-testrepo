@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-web
-  namespace: myapp
 spec:
   selector:
     matchLabels:
@@ -21,7 +20,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-api
-  namespace: myapp
 spec:
   selector:
     matchLabels:
