@@ -21,8 +21,8 @@ profiles:
 - name: staging
   deploy:
     kustomize:
-     path: manifests/overlays/staging
+      path: manifests/overlays/staging
 - name: prod
   deploy:
     kustomize:
-     path: manifests/overlays/prod
+      path: manifests/overlays/prod
