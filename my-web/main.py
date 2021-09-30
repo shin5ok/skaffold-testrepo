@@ -10,7 +10,6 @@ logging.basicConfig(level=logging.INFO)
 
 name = "John"
 api = "http://my-api/api"
-# reserve string 'Ping'
 @app.route('/')
 def _root():
     logging.info("access to /")
