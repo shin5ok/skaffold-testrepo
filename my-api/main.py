@@ -8,10 +8,10 @@ logging.basicConfig(level=logging.INFO)
 
 name = "John"
 # reserve string 'Ping'
-@app.route('/')
+@app.route('/api')
 def _root():
-    logging.info("access to /")
-    return render_template("index.html", name=name)
+    logging.info("access to /api")
+    return jsonify({"name":name})
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
