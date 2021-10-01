@@ -20,6 +20,7 @@ services:
         #         restart: always
 
         upgrading:
+                image: us-central1-docker.pkg.dev/shingo-new-proto/myrepo/pubsub-subsc
                 environment:
                         SUBSC: "upgrading-notify"
                         PROJECT_ID: "shingo-new-proto"
