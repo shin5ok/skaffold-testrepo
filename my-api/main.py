@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.INFO)
 
-name = "Kawano"
+name = "Shingo Kawano"
 @app.route('/api')
 def _root():
     logging.info("access to /api")
